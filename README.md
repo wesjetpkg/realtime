@@ -2,7 +2,7 @@
 
 Listens to changes in a PostgreSQL Database and via websockets.
 
-This is for usage with Wesbitty [Realtime](https://github.com/wes-bitty/wesrealtime) server.
+This is for usage with Wesbitty [Realtime](https://github.com/wesjetpkg/realtime) server.
 
 ## Usage
 
@@ -12,7 +12,7 @@ This is for usage with Wesbitty [Realtime](https://github.com/wes-bitty/wesrealt
 You can set up one connection to be used across the whole app.
 
 ```js
-import { RealtimeClient } from '@wesbitty/wesrealtime'
+import { RealtimeClient } from '@wesjetpkg/realtime'
 
 var client = new RealtimeClient(process.env.REALTIME_URL)
 client.connect()
@@ -20,16 +20,16 @@ client.connect()
 
 REALTIME_URL is `'ws://localhost:4000/socket'` when developing locally and `'wss://<project_ref>.wesbitty.com/realtime/v1'` when connecting to your Wesbitty project.
 
-You can pass in your JWT If you have enabled JWT authorization in Wesbitty [Realtime](https://github.com/wes-bitty/wesrealtime) server.
+You can pass in your JWT If you have enabled JWT authorization in Wesbitty [Realtime](https://github.com/wesjetpkg/realtime) server.
 
 ```js
-import { RealtimeClient } from '@wesbitty/wesrealtime'
+import { RealtimeClient } from '@wesjetpkg/wesrealtime'
 
 var client = new RealtimeClient(process.env.REALTIME_URL, { params: { apikey: 'token123' }})
 client.connect()
 ```
 
-See [Realtime: Websocket Connection Authorization](https://github.com/wes-bitty/wesrealtime#websocket-connection-authorization) for more information.
+See [Realtime: Websocket Connection Authorization](https://github.com/wesjetpkg/realtime#websocket-connection-authorization) for more information.
 
 **Socket Hooks**
 
@@ -175,12 +175,4 @@ type column = {
 }
 ``` 
 
-## Credits
-
-- Original Node.js client was made by Mario Campa of [phoenix-channels](github.com/mcampa/phoenix-client).
-- API was made by authors of the [Phoenix Framework](http://www.phoenixframework.org/). See their website for complete list of authors.
-
-## License
-
-MIT. License is the same as [phoenix-channels](https://github.com/mcampa/phoenix-client) and [Phoenix Framework](https://phoenixframework.org/).
-
+Made with love by [Wesbitty, Inc.](https://wesbitty.com)
