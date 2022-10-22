@@ -23,7 +23,7 @@ REALTIME_URL is `'ws://localhost:4000/socket'` when developing locally and `'wss
 You can pass in your JWT If you have enabled JWT authorization in Wesbitty [Realtime](https://github.com/wesjetpkg/realtime) server.
 
 ```js
-import { RealtimeClient } from '@wesjetpkg/wesrealtime'
+import { RealtimeClient } from '@wesjetpkg/realtime'
 
 var client = new RealtimeClient(process.env.REALTIME_URL, { params: { apikey: 'token123' }})
 client.connect()
